@@ -20,4 +20,4 @@ jobs:
 
     - name: Update ECS service
       run: |
-        aws ecs update-service --cluster streamlit-ecs --service streamlit-serve-2 --force-new-deployment
+        aws ecs update-service --cluster streamlit-cluster --service streamlit-serve --force-new-deployment
