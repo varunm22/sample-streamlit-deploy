@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  streamlit:
+    image: 962320874254.dkr.ecr.us-east-1.amazonaws.com/mwcore-cpu
+    command: mwcore/streamlit/start.sh
+    platform: linux/amd64
+    environment:
+      - LOCAL_STREAMLIT=1
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./mwcore/:/app/mwcore/
+      - ~/.aws/:/root/.aws/
